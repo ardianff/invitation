@@ -20,6 +20,27 @@ const WeddingScroll = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  // Restore visitedWelcome state from localStorage on revisit
+  useEffect(() => {
+    try {
+      const hasVisited = localStorage.getItem("wedding_visited_welcome");
+      if (hasVisited === "true") {
+        setVisitedWelcome(true);
+      }
+    } catch (e) {
+      console.error("LocalStorage error:", e);
+    }
+  }, []);
+
+  const handleNextWelcome = () => {
+    setVisitedWelcome(true);
+    try {
+      localStorage.setItem("wedding_visited_welcome", "true");
+    } catch (e) {
+      console.error("LocalStorage error:", e);
+    }
+  };
+
   useEffect(() => {
     if (visitedAll) {
       document.body.style.overflow = "auto";
@@ -34,6 +55,7 @@ const WeddingScroll = () => {
     window.scrollTo({ top: 0 });
   }, []);
 
+  // Play audio when visitedWelcome is true (handles revisit & autoplay with gesture fallback)
   useEffect(() => {
     if (visitedWelcome && audioRef.current) {
       audioRef.current
@@ -41,18 +63,39 @@ const WeddingScroll = () => {
         .then(() => {
           setIsPlaying(true);
         })
-        .catch((error) => {
-          console.error("Failed to play audio:", error);
+        .catch(() => {
+          // If browser policy blocks cold autoplay on revisit, play on first user tap anywhere
+          const handleFirstGesture = () => {
+            if (audioRef.current && audioRef.current.paused) {
+              audioRef.current
+                .play()
+                .then(() => setIsPlaying(true))
+                .catch(() => {});
+            }
+            window.removeEventListener("click", handleFirstGesture);
+            window.removeEventListener("touchstart", handleFirstGesture);
+          };
+
+          window.addEventListener("click", handleFirstGesture, { once: true });
+          window.addEventListener("touchstart", handleFirstGesture, { once: true });
         });
     }
   }, [visitedWelcome]);
 
+  // Pause when tab hidden, resume when tab becomes visible again
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.hidden) {
         if (audioRef.current && !audioRef.current.paused) {
           audioRef.current.pause();
           setIsPlaying(false);
+        }
+      } else {
+        if (visitedWelcome && audioRef.current && audioRef.current.paused) {
+          audioRef.current
+            .play()
+            .then(() => setIsPlaying(true))
+            .catch(() => {});
         }
       }
     };
@@ -61,7 +104,7 @@ const WeddingScroll = () => {
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, []);
+  }, [visitedWelcome]);
 
   const handlePlayPauseMusic = () => {
     if (audioRef.current) {
@@ -111,7 +154,7 @@ const WeddingScroll = () => {
         <section id="scroll-container" className="relative w-full h-full">
           {!visitedWelcome && (
             <section className="absolute top-0 left-0 w-full h-full z-10">
-              <Welcome onNext={() => setVisitedWelcome(true)} />
+              <Welcome onNext={handleNextWelcome} />
             </section>
           )}
           <IntroduceSection visitedWelcome={visitedWelcome} />
