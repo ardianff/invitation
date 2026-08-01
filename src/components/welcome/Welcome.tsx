@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 import { BonVivantFont } from "@/style/fonts";
 import Flex from "../Flex";
-import ScrollArrow from "../../../public/scroll_arrow.svg";
 import SlideUp from "../SlideUp";
 import Text from "../Text";
 import { useInterval } from "@/hooks/useInterval";

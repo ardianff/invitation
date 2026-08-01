@@ -34,9 +34,9 @@ const Account = ({ name, bankInfo }: AccountProps) => {
 
   return (
     <div
-      className={`w-full rounded-2xl p-5 relative overflow-hidden shadow-xl text-white transition-all duration-300 transform hover:-translate-y-0.5 my-2 ${isBCA
-        ? "bg-gradient-to-br from-[#0c2340] via-[#103057] to-[#08182b] border border-blue-400/20"
-        : "bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#020617] border border-amber-400/20"
+      className={`w-full aspect-[1.586/1] min-h-[200px] max-h-[220px] rounded-2xl p-5 relative overflow-hidden shadow-xl text-white flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-0.5 my-2 ${isBCA
+        ? "bg-gradient-to-br from-[#0c2340] via-[#103057] to-[#08182b] border border-blue-400/30"
+        : "bg-gradient-to-br from-[#0c2340] via-[#15345c] to-[#091a30] border border-amber-400/30"
         }`}
     >
       {/* Background Holographic Glow effect */}
@@ -90,18 +90,18 @@ const Account = ({ name, bankInfo }: AccountProps) => {
         <div className="text-11pxr font-semibold uppercase tracking-widest text-white/70 mb-1">
           Account Number
         </div>
-        <div className="font-mono text-18pxr medium:text-20pxr font-bold tracking-widest text-white drop-shadow-md select-all">
+        <div className="select-all whitespace-nowrap font-mono text-17pxr font-bold tracking-wider text-white drop-shadow-md medium:text-19pxr">
           {formattedNumber}
         </div>
       </div>
 
       {/* Footer: Cardholder Name & Copy Button */}
-      <div className="flex items-end justify-between z-10 relative pt-2 border-t border-white/10">
-        <div>
+      <div className="relative z-10 mt-auto flex min-w-0 items-end justify-between gap-2 border-t border-white/10 pt-2 w-full">
+        <div className="min-w-0 flex-1 pr-2">
           <div className="text-9pxr font-semibold uppercase tracking-widest text-white/60">
             Cardholder
           </div>
-          <div className="font-bold text-13pxr uppercase tracking-wider text-white drop-shadow-xs max-w-[200px] truncate">
+          <div className="truncate max-w-[170px] text-13pxr font-bold uppercase tracking-wider text-white drop-shadow-xs">
             {name}
           </div>
         </div>
@@ -109,7 +109,7 @@ const Account = ({ name, bankInfo }: AccountProps) => {
         {/* Salin Button */}
         <button
           onClick={handleAccountCopy}
-          className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-12pxr font-bold shadow-md transition-all duration-200 active:scale-95 cursor-pointer ${copied
+          className={`flex shrink-0 cursor-pointer items-center gap-1.5 rounded-xl px-3.5 py-1.5 text-12pxr font-bold shadow-md transition-all duration-200 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${copied
             ? "bg-emerald-500 text-white"
             : "bg-white/20 hover:bg-white/30 backdrop-blur-md text-white border border-white/30"
             }`}

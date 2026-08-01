@@ -58,7 +58,7 @@ const AccountSection = ({ onDone }: { onDone: () => void }) => {
       <section
         ref={ref}
         id="account-section"
-        className="w-full bg-gradient-to-b from-white via-[#edf3fc] to-black px-24pxr pb-16 pt-4"
+        className="w-full bg-gradient-to-b from-white via-[#edf3fc] to-[#e6eefa] px-24pxr pb-8 pt-4"
       >
         <div className="text-center">
           {TITLE.map((title, i) => (
@@ -68,9 +68,9 @@ const AccountSection = ({ onDone }: { onDone: () => void }) => {
           ))}
         </div>
         <Spacing size={20} />
-        <SlideUp show={transitionIds.includes(TITLE.length)}>
+        <SlideUp show={transitionIds.includes(TITLE.length)} className="w-full">
           <Arcodion>
-            <Arcodion.Header className="cursor-pointer w-full py-21.5pxr border-t border-gray-800 text-gray-900 font-bold">
+            <Arcodion.Header className="cursor-pointer w-full py-21.5pxr border-t border-gray-300 text-gray-900 font-bold">
               <Text className="text-gray-900 font-bold text-16pxr">Nomor Rekening Mempelai Wanita</Text>
               <Arcodion.Arrow />
             </Arcodion.Header>
@@ -87,9 +87,9 @@ const AccountSection = ({ onDone }: { onDone: () => void }) => {
           </Arcodion>
         </SlideUp>
         <Spacing size={20} />
-        <SlideUp show={transitionIds.includes(TITLE.length + 1)}>
+        <SlideUp show={transitionIds.includes(TITLE.length + 1)} className="w-full">
           <Arcodion>
-            <Arcodion.Header className="cursor-pointer w-full py-21.5pxr border-t border-gray-800 text-gray-900 font-bold">
+            <Arcodion.Header className="cursor-pointer w-full py-21.5pxr border-t border-gray-300 text-gray-900 font-bold">
               <Text className="text-gray-900 font-bold text-16pxr">Nomor Rekening Mempelai Pria</Text>
               <Arcodion.Arrow />
             </Arcodion.Header>
@@ -106,6 +106,7 @@ const AccountSection = ({ onDone }: { onDone: () => void }) => {
           </Arcodion>
         </SlideUp>
       </section>
+      <div className="w-full h-16 bg-gradient-to-b from-[#e6eefa] to-black" />
       <SectionDivider variant="dark" className="bg-black py-4 my-0" />
       <SlideUp show={transitionIds.includes(TITLE.length + 2)}>
         <FooterSection />
