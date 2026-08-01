@@ -10,7 +10,7 @@ import Text from "../Text";
 import { useInterval } from "@/hooks/useInterval";
 import useIsInView from "@/hooks/useIsInView";
 
-const TITLE = ["THE", "WEDDING", "OF", "TUTIE", "AND", "ANDRE"];
+const TITLE = ["THE", "WEDDING OF", "TUTIE", "AND", "ANDRE"];
 const Welcome = ({
   className,
   onNext,
@@ -149,32 +149,41 @@ const Welcome = ({
 
       </Flex>
 
-      <div className="pointer-events-none absolute inset-0 z-30 flex items-center justify-center">
+      <div className="pointer-events-none absolute inset-0 z-30 flex items-center justify-center overflow-visible">
         <SlideUp
           show={transitionIds.includes(TITLE.length + 1)}
-          className="pointer-events-auto !w-auto"
+          className="pointer-events-auto !w-auto !overflow-visible"
         >
-          <button
-            type="button"
-            onClick={() => setVisible(false)}
-            className="group flex h-14 w-14 touch-manipulation select-none items-center justify-center rounded-full border border-white/80 bg-transparent text-white shadow-[0_2px_12px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:scale-110 hover:border-white active:scale-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-            aria-label="Buka Undangan"
-          >
-            <svg
-              aria-hidden="true"
-              className="pointer-events-none h-9 w-9 animate-pulse text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] transition-transform duration-300 motion-reduce:animate-none group-hover:scale-110"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div className="relative flex items-center justify-center p-4 overflow-visible">
+            {/* Outer Expanding Sheer Ping Ripple Circle */}
+            <span className="absolute h-16 w-16 rounded-full bg-white/25 animate-ping opacity-60 pointer-events-none" />
+
+            {/* Soft Glass Glow Circle */}
+            <span className="absolute h-20 w-20 rounded-full bg-white/15 blur-md animate-pulse pointer-events-none" />
+
+            {/* Main Glassmorphism Button Body */}
+            <button
+              type="button"
+              onClick={() => setVisible(false)}
+              className="group relative z-10 flex h-16 w-16 touch-manipulation select-none items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-lg text-white shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-300 hover:scale-110 hover:bg-white/25 hover:border-white/80 hover:shadow-[0_8px_32px_rgba(255,255,255,0.25)] active:scale-95 cursor-pointer focus:outline-none"
+              aria-label="Buka Undangan"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.75}
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
-            </svg>
-          </button>
+              <svg
+                aria-hidden="true"
+                className="h-7 w-7 text-white/90 transition-all duration-300 group-hover:text-white group-hover:scale-110 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.75}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </button>
+          </div>
         </SlideUp>
       </div>
     </div>
