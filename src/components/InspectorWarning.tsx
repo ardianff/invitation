@@ -21,7 +21,7 @@ const InspectorWarning = () => {
     const handleContextMenu = (event: MouseEvent) => {
       event.preventDefault();
       show(
-        "Permission Denied: Right-click is disabled contact https://baseec.now.sh/"
+        "Permission Denied: Right-click is disabled contact https://baseec.my.id/"
       );
     };
 
@@ -33,7 +33,7 @@ const InspectorWarning = () => {
       ) {
         event.preventDefault();
         show(
-          "Permission Denied: Developer tools access is restricted contact https://baseec.now.sh/"
+          "Permission Denied: Developer tools access is restricted contact https://baseec.my.id/"
         );
       }
     };

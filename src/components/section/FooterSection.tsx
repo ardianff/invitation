@@ -47,7 +47,7 @@ const FooterSection = () => {
         <Text className="text-10pxr leading-25pxr mr-2 text-white/90 drop-shadow-xs">
           Made with ♡ by{" "}
           <a
-            href="https://baseec.now.sh/"
+            href="https://baseec.my.id/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white underline font-semibold"
