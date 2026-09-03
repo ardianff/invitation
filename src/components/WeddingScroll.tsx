@@ -10,6 +10,7 @@ import Spacing from "./Spacing";
 import Welcome from "./welcome/Welcome";
 import StorySection from "./section/StorySection";
 import CalendarSection from "./section/CalendarSection";
+import WeddingCalendar from "./section/WeddingCalendar";
 import IntroduceSection from "./section/IntroduceSection";
 
 import SectionDivider from "./SectionDivider";
@@ -129,7 +130,8 @@ const WeddingScroll = () => {
           <SectionDivider />
           <AddressSection />
           <SectionDivider />
-          <CalendarSection />
+          {/* <CalendarSection /> */}
+          <WeddingCalendar />
           <SectionDivider />
           <GallerySection />
           <SectionDivider />

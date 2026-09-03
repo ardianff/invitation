@@ -132,7 +132,7 @@ const AddressSection = () => {
 
         <SlideUp show={transitionIds.includes(TITLE.length + 6)}>
           <Spacing size={10} />
-          <CountDown />
+          {/* <CountDown /> */}
           <Spacing size={10} />
           <RollingBanner />
         </SlideUp>

@@ -33,7 +33,7 @@ const InspectorWarning = () => {
       ) {
         event.preventDefault();
         show(
-          "Permission Denied: Developer tools access is restricted contact https://baseec.my.id/"
+          "Permission Denied: Developer tools access is restricted"
         );
       }
     };
