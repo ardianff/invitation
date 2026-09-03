@@ -10,15 +10,15 @@ import Script from "next/script"; // Import Script from next/script
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Ardian & Anya - Wedding Invitation",
+  title: "Tasyakuran Pernikahan Ardian & Anya",
   description:
-    "Wedding Invitation Ardian & Anya Sabtu, 03 Oktober 2026",
+    "Tasyakuran Pernikahan Ardian & Anya Sabtu, 10 Oktober 2026",
   openGraph: {
     type: "website",
-    title: "Ardian & Anya - Wedding Invitation",
+    title: "Tasyakuran Pernikahan Ardian & Anya",
     locale: "id_ID",
     description:
-      "Wedding Invitation Ardian & Anya Sabtu, 03 Oktober 2026",
+      "Tasyakuran Pernikahan Ardian & Anya Sabtu, 10 Oktober 2026",
     images: [
       {
         url: "", // Must be an absolute URL
