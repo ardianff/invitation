@@ -90,7 +90,7 @@ const Story = ({ visitedWelcome }: { visitedWelcome: boolean }) => {
           <Text
             className={`text-10pxr medium:text-20pxr large:text-24pxr leading-none text-gray-900 font-bold ${BonVivantFont.className}`}
           >
-            T&A
+            A&A
           </Text>
         </div>
       </div>
@@ -127,7 +127,7 @@ const Story = ({ visitedWelcome }: { visitedWelcome: boolean }) => {
           <Spacing size={4} />
           <Image
             src="/profile/object-2.jpeg"
-            alt="Tutie Alawiyah"
+            alt="Aisyah Kanya Rosyadi"
             width={125}
             height={125}
             style={{ width: "auto", height: "auto" }}
@@ -136,11 +136,11 @@ const Story = ({ visitedWelcome }: { visitedWelcome: boolean }) => {
           <Spacing size={4} />
           <div className="flex flex-col gap-1 text-gray-900">
             <Subtitle display="block">
-              Tutie Alawiyah
+              Aisyah Kanya Rosyadi
             </Subtitle>
             <Text display="inline-block" className="whitespace-pre-line text-13pxr leading-19pxr text-gray-800 font-medium">
-              Putri pertama dari <br />
-              <strong className="text-gray-900 font-bold">Bapak Sanusi</strong> &amp; <strong className="text-gray-900 font-bold">Ibu Muyassaroh</strong>
+              Putri kedua dari <br />
+              <strong className="text-gray-900 font-bold">Bapak Imron Rosyadi</strong> &amp; <strong className="text-gray-900 font-bold">Ibu Mujiyanti</strong>
             </Text>
           </div>
         </div>
@@ -154,16 +154,16 @@ const Story = ({ visitedWelcome }: { visitedWelcome: boolean }) => {
         <div className="w-full flex flex-row items-center gap-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-gray-200/80 shadow-md shadow-gray-200/50">
           <Spacing size={4} />
           <div className="flex flex-col gap-1 text-right flex-grow text-gray-900">
-            <Subtitle display="block">Muhammad Rafli Andreansyah</Subtitle>
+            <Subtitle display="block">Ardian Ferdy Firmansyah</Subtitle>
             <Text display="inline-block" className="whitespace-pre-line text-13pxr leading-19pxr text-gray-800 font-medium">
               Putra pertama dari <br />
-              <strong className="text-gray-900 font-bold">Bapak Muhammad Saerozi, M. Pd</strong> &amp; <strong className="text-gray-900 font-bold">Ibu Fauziah</strong>
+              <strong className="text-gray-900 font-bold">Bapak Joko Rahmantoko</strong> &amp; <strong className="text-gray-900 font-bold">Ibu Nia Kurnia</strong>
             </Text>
           </div>
           <Spacing size={4} />
           <Image
             src="/profile/object-1.jpeg"
-            alt="Muhammad Rafli Andreansyah"
+            alt="Ardian Ferdy Firmansyah"
             width={125}
             height={125}
             style={{ width: "auto", height: "auto" }}

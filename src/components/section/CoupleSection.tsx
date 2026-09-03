@@ -81,8 +81,8 @@ const CoupleSection = () => {
         <CoupleImage
           url="/profile/object-2.jpeg"
           person={{
-            name: "Tutie Alawiyah",
-            desc: "Putri pertama dari Bapak Sanusi & Ibu Muyassaroh",
+            name: "Aisyah Kanya Rosyadi",
+            desc: "Putri kedua dari Bapak Imron Rosyadi & Ibu Mujiyanti",
           }}
         />
 
@@ -92,8 +92,8 @@ const CoupleSection = () => {
         <CoupleImage
           url="/profile/object-1.jpeg"
           person={{
-            name: "Muhammad Rafli Andreansyah",
-            desc: "Putra pertama dari Bapak Muhammad Saerozi, M. Pd & Ibu Fauziah",
+            name: "Ardian Ferdy Firmansyah",
+            desc: "Putra pertama dari Bapak Joko Rahmantoko & Ibu Nia Kurnia",
           }}
         />
       </SlideUp>

@@ -4,7 +4,7 @@ import Glare from "../../public/glare/glare_white.svg";
 import Text from "./Text";
 
 const BANNERS = Array.from({ length: 3 }).map(
-  () => "05 September 2026, 09.00 WIB - Selesai"
+  () => "10 Oktober 2026, 12.00 WIB - Selesai"
 );
 const RollingBanner = () => {
   return (

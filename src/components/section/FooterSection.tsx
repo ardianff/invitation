@@ -38,7 +38,7 @@ const FooterSection = () => {
           display="inline-block"
           className={`text-24pxr leading-36pxr medium:text-32pxr medium:leading-48pxr whitespace-pre-line text-white font-bold drop-shadow-md mt-1 ${BonVivantFont.className}`}
         >
-          Tutie & Andre
+          Ardian & Anya
         </Text>
       </div>
 

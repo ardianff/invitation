@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 import Text from "./Text";
 import { BonVivantFont } from "@/style/fonts";
 
-const targetDate = new Date("September 5, 2026 09:00:00");
-const endDate = new Date("September 5, 2026 13:00:00");
+const targetDate = new Date("October 10, 2026 12:00:00");
+const endDate = new Date("October 10, 2026 14:00:00");
 
 interface TimeLeft {
   days?: number;
@@ -46,9 +46,9 @@ const CountDown: React.FC = () => {
   function getGoogleCalendarUrl() {
     const start = targetDate.toISOString().replace(/-|:|\.\d+/g, "");
     const end = endDate.toISOString().replace(/-|:|\.\d+/g, "");
-    const title = encodeURIComponent("Tutie & Andre Wedding");
-    const details = encodeURIComponent("Event Details: Tutie & Andre Wedding");
-    const location = encodeURIComponent("Dusun 1 Seda Banjarwangunan RT.003/RW.002 No. 40 Gg. Masjid Al Amin, Kec. Mundu Kab. Cirebon Jawa Barat");
+    const title = encodeURIComponent("Tasyakuran Pernikahan Ardian & Anya");
+    const details = encodeURIComponent("Event Details: Tasyakuran Pernikahan Ardian & Anya");
+    const location = encodeURIComponent("Jl. Puri Dinar Elok Blok E-V No. 6 Meteseh Kec. Tembalang Kota Semarang Jawa Tengah 50271");
 
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&details=${details}&location=${location}&sf=true&output=xml`;
   }

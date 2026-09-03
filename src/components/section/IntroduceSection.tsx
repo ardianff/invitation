@@ -96,7 +96,7 @@ const IntroduceSection = ({ visitedWelcome }: { visitedWelcome: boolean }) => {
           show={transitionIds.includes(0)}
           style={{ transform: "translate(-0.75rem)" }}
         >
-          <Title display="block">NEVER</Title>
+          <Title display="block">DUA</Title>
         </SlideUp>
         <Spacing size={8} />
         <Flex direction="row" align="center" justify="end">
@@ -111,7 +111,7 @@ const IntroduceSection = ({ visitedWelcome }: { visitedWelcome: boolean }) => {
             style={{ transform: "translate(0.75rem)" }}
           >
             <Title display="block" className="text-right">
-              WITH
+              HATI
             </Title>
           </SlideUp>
         </Flex>
@@ -120,7 +120,7 @@ const IntroduceSection = ({ visitedWelcome }: { visitedWelcome: boolean }) => {
           show={transitionIds.includes(2)}
           style={{ transform: "translate(-0.75rem)" }}
         >
-          <Title display="block">SADNESS</Title>
+          <Title display="block">BERSATU</Title>
         </SlideUp>
       </div>
 
@@ -133,14 +133,14 @@ const IntroduceSection = ({ visitedWelcome }: { visitedWelcome: boolean }) => {
           style={{ transform: "translate(0.75rem)" }}
         >
           <Title display="block" className="text-right">
-            ALWAYS
+            SATU
           </Title>
         </SlideUp>
         <Spacing size={8} />
         <Flex direction="row" align="center" justify="start">
           <SlideUp show={transitionIds.includes(4)}>
             <Title display="block" style={{ transform: "translate(-0.75rem)" }}>
-              WITH
+              CINTA
             </Title>
           </SlideUp>
           <SlideUp
@@ -153,7 +153,7 @@ const IntroduceSection = ({ visitedWelcome }: { visitedWelcome: boolean }) => {
         <Spacing size={8} />
         <SlideUp show={transitionIds.includes(5)}>
           <Flex direction="row" align="start" justify="end">
-            <Title style={{ transform: "translate(0.55rem)" }}>GLADNESS</Title>
+            <Title style={{ transform: "translate(0.55rem)" }}>ABADI</Title>
           </Flex>
         </SlideUp>
       </div>

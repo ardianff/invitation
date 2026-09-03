@@ -76,10 +76,10 @@ const AccountSection = ({ onDone }: { onDone: () => void }) => {
             </Arcodion.Header>
             <Arcodion.Content>
               <Account
-                name="TUTIE ALAWIYAH"
+                name="AISYAH KANYA R"
                 bankInfo={{
                   bankName: "BCA",
-                  accountNumber: "4620945698",
+                  accountNumber: "8915439426",
                 }}
               />
               <Spacing size={1} />
@@ -95,10 +95,10 @@ const AccountSection = ({ onDone }: { onDone: () => void }) => {
             </Arcodion.Header>
             <Arcodion.Content>
               <Account
-                name="MUHAMMAD RAFLI ANDREANSYAH"
+                name="ARDIAN F FIRMANSYAH"
                 bankInfo={{
-                  bankName: "Mandiri",
-                  accountNumber: "1390032346409",
+                  bankName: "BCA",
+                  accountNumber: "8915379890",
                 }}
               />
               <Spacing size={1} />

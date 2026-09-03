@@ -77,15 +77,15 @@ const AddressSection = () => {
           <SlideUp show={transitionIds.includes(TITLE.length)}>
             <Address
               title="Akad Nikah"
-              desc={`Sabtu, 05 September 2026 \n 09.00 WIB s/d Selesai`}
+              desc={`Sabtu, 03 Oktober 2026 \n 08.00 WIB s/d Selesai`}
             />
           </SlideUp>
           <SlideUp show={transitionIds.includes(TITLE.length + 1)}>
             <div className="flex flex-row gap-4 w-full p-4 text-14pxr leading-22pxr bg-gray-100 border border-gray-200 text-gray-900 mt-4 rounded-md items-center text-left">
               <Text display="block" className="flex-grow font-medium text-gray-900">
-                Dusun 1 Seda Banjarwangunan RT.003/RW.002 No. 40 Gg. Masjid Al Amin, Kec. Mundu Kab. Cirebon Jawa Barat
+                Gedung Semeru, Jl. Elang Raya No.2, Mangunharjo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272
               </Text>
-              <Navigations href="https://maps.app.goo.gl/wBG6pjtee25Q4oRW9?g_st=ic" />
+              <Navigations href="https://maps.app.goo.gl/ZiCfNVZL3e7JyCgy7" />
             </div>
           </SlideUp>
         </div>
@@ -97,35 +97,35 @@ const AddressSection = () => {
           <SlideUp show={transitionIds.includes(TITLE.length + 2)}>
             <Address
               title="Resepsi Nikah"
-              desc={`Sabtu, 05 September 2026 \n 11.00 WIB s/d Selesai`}
+              desc={`Sabtu, 03 Oktober 2026 \n 12.00 WIB s/d 14.00 WIB`}
             />
           </SlideUp>
           <SlideUp show={transitionIds.includes(TITLE.length + 3)}>
             <div className="flex flex-row gap-4 w-full p-4 text-14pxr leading-22pxr bg-gray-100 border border-gray-200 text-gray-900 mt-4 rounded-md items-center text-left">
               <Text display="block" className="flex-grow font-medium text-gray-900">
-                Dusun 1 Seda Banjarwangunan RT.003/RW.002 No. 40 Gg. Masjid Al Amin, Kec. Mundu Kab. Cirebon Jawa Barat
+                Gedung Semeru, Jl. Elang Raya No.2, Mangunharjo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272
               </Text>
-              <Navigations href="https://maps.app.goo.gl/wBG6pjtee25Q4oRW9?g_st=ic" />
+              <Navigations href="https://maps.app.goo.gl/ZiCfNVZL3e7JyCgy7" />
             </div>
           </SlideUp>
         </div>
 
         <Spacing size={16} />
 
-        {/* Ngunduh Mantu */}
+        {/* Tasyakuran Pernikahan */}
         <div className="flex flex-col bg-white/90 border border-gray-200/90 shadow-xs py-4 px-4 lg:px-6 text-14pxr leading-25pxr rounded-xl text-gray-900">
           <SlideUp show={transitionIds.includes(TITLE.length + 4)}>
             <Address
-              title="Ngunduh Mantu"
-              desc={`Senin, 07 September 2026 \n 10.00 WIB s/d Selesai`}
+              title="Tasyakuran Pernikahan"
+              desc={`Sabtu, 10 Oktober 2026 \n 12.00 WIB s/d 14.00 WIB`}
             />
           </SlideUp>
           <SlideUp show={transitionIds.includes(TITLE.length + 5)}>
             <div className="flex flex-row gap-4 w-full p-4 text-14pxr leading-22pxr bg-gray-100 border border-gray-200 text-gray-900 mt-4 rounded-md items-center text-left">
               <Text display="block" className="flex-grow font-medium text-gray-900">
-                Jl. KH. A. Sya’roni, RT.1/RW.1, No. 27 Desa Kertasinduyasa, Jatibarang, Kab. Brebes Jawa Tengah
+                Jl. Puri Dinar Elok Blok E-V No. 6 Meteseh Kec. Tembalang Kota Semarang Jawa Tengah 50271
               </Text>
-              <Navigations href="https://maps.app.goo.gl/yR4NdAtWEBJ8RhXz7?g_st=ic" />
+              <Navigations href="https://maps.app.goo.gl/FVH32pqQgrUGPNQ37" />
             </div>
           </SlideUp>
         </div>

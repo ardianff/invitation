@@ -22,7 +22,7 @@ const TITLE = ["Gallery"];
 
 
 const getGalleryImageLoader = (number: number) => {
-  return `/gallery/gallery_${number < 10 ? `0${number}` : number}.jpeg`;
+  return `/gallery/gallery_${number < 10 ? `${number}` : number}.jpeg`;
 };
 const IMAGES = Array.from({ length: 10 }, (_, i) => ({
   url: getGalleryImageLoader(i + 1),
